@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
 const CountryStyled = styled.article`
   border-radius: 5px;
@@ -39,8 +40,14 @@ const CountryStyled = styled.article`
 `
 
 function Country({ data }) {
+  const history = useHistory()
+
+  const handleClick = () => {
+    history.push(`/country/${data.name}`)
+  }
+
   return (
-    <CountryStyled>
+    <CountryStyled onClick={handleClick}>
       <figure className="Country__figure">
         <img loading="lazy" src={ data.flag } alt={ data.name } />
       </figure>

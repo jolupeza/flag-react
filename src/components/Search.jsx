@@ -5,6 +5,15 @@ import { useDispatch } from 'react-redux'
 
 const SearchStyled = styled.div`
   display: flex;
+  position: relative;
+  .close {
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
 `
 
 function Search() {

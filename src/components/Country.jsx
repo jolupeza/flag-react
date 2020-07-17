@@ -7,7 +7,6 @@ const CountryStyled = styled.article`
   box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   text-align: center;
-  width: 264px;
   img {
     height: 160px;
     object-fit: cover;

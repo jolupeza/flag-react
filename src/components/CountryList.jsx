@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Country from './Country'
+import Wrapper from './Wrapper'
 import { useSelector, useDispatch } from 'react-redux'
 
 const CountryListStyled = styled.section`
   display: grid;
   grid-row-gap: 2.25rem;
+  grid-auto-flow: columns;
+  grid-column-gap: 65px;
+  grid-template-columns: repeat(auto-fill, 262px);
   justify-content: center;
   padding: 4rem 2rem;
 `
@@ -28,15 +32,17 @@ function CountryList() {
   }, [dispatch])
 
   return (
-    <CountryListStyled>
-      {
-        countries.map(country => {
-          return (
-            <Country key={ country.numericCode } data={ country } />
-          )
-        })
-      }
-    </CountryListStyled>
+    <Wrapper>
+      <CountryListStyled>
+        {
+          countries.map(country => {
+            return (
+              <Country key={ country.numericCode } data={ country } />
+            )
+          })
+        }
+      </CountryListStyled>
+    </Wrapper>
   )
 }
 

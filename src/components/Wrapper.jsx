@@ -14,3 +14,5 @@ function Wrapper({ children }) {
     </WrapperStyled>
   );
 }
+
+export default Wrapper

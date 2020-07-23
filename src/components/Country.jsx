@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
+import slugify from 'slugify'
 
 const CountryStyled = styled.article`
   border-radius: 5px;
@@ -54,7 +55,7 @@ function Country({ data }) {
   const history = useHistory()
 
   const handleClick = () => {
-    history.push(`/country/${data.name}`)
+    history.push(`/country/${slugify(data.name)}`)
   }
 
   return (

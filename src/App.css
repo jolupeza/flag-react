@@ -5,8 +5,32 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--grayBg);
-  color: var(--textColor);
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
+}
+
+main {
+  background-color: var(--grayBg);
+  color: var(--textColor);
+  min-height: 100vh;
+}
+
+.is-dark-mode {
+  --textColor: #ffffff;
+  --white: #273542;
+  --grayBg: #1a2833;
+}
+
+.is-light-mode {
+  --textColor: #111517;
+  --white: #ffffff;
+  --grayBg: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --textColor: #ffffff;
+    --white: #273542;
+    --grayBg: #1a2833;
+  }
 }

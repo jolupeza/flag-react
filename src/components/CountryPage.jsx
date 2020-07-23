@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Wrapper from './Wrapper'
 
 const CountryPageStyled = styled.div`
 
@@ -8,7 +9,9 @@ const CountryPageStyled = styled.div`
 function CountryPage({ match }) {
   return (
     <CountryPageStyled>
-      { match.params.id }
+      <Wrapper>
+        { match.params.id }
+      </Wrapper>
     </CountryPageStyled>
   )
 }

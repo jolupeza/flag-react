@@ -10,14 +10,14 @@ const FilterByRegionStyled = styled.select`
   }
   .dropdown {
     border-radius: 5px;
-    background-color: var(--white);
+    background-color: var(--grayBg);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
     cursor: pointer;
     text-align: center;
     font-size: 12px;
     padding: 20px;
     position: relative;
-    background: var(--white);
+    background: var(--grayBg);
   }
   .btn-toggle .fas {
     display: none;

@@ -5,18 +5,30 @@ import { useHistory } from 'react-router-dom'
 const CountryStyled = styled.article`
   border-radius: 5px;
   box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
   overflow: hidden;
   text-align: center;
+  &:hover .Country__details {
+    border: 1px solid var(--textColor);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+  }
   img {
+    border-radius: 5px 5px 0 0;
     height: 160px;
     object-fit: cover;
+    vertical-align: top;
     width: 100%;
   }
   .Country__figure {
     margin: 0;
   }
   .Country__details {
+    background-color: var(--grayBg);
+    border: 1px solid transparent;
+    border-top: none;
     padding: 1.5rem;
+    transition: 0.3s border;
   }
   .Country__name {
     font-size: 1.125rem;

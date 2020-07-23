@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const InputStyled = styled.label`
   align-items: center;
-  background-color: white;
+  background-color: var(--grayBg);
   border-radius: 5px;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
   display: inline-flex;
@@ -14,7 +14,10 @@ const InputStyled = styled.label`
     margin-right: 1rem;
   }
   input {
+    background-color: var(--grayBg);
     border: none;
+    color: var(--white);
+    flex: 1;
     font-size: 0.7rem;
     height: 48px;
     line-height: 48px;

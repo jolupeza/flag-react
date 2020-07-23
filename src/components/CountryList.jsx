@@ -8,10 +8,10 @@ const CountryListStyled = styled.section`
   display: grid;
   grid-row-gap: 2.25rem;
   grid-auto-flow: columns;
-  grid-column-gap: 65px;
-  grid-template-columns: repeat(auto-fill, 262px);
+  grid-column-gap: 75px;
+  grid-template-columns: repeat(auto-fill, 270px);
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 3rem 0;
 `
 function CountryList() {
   const dispatch = useDispatch()
